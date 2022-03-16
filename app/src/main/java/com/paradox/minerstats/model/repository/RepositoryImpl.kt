@@ -22,7 +22,6 @@ class RepositoryImpl @Inject constructor(
      * @param miner: String wallet address.
      * @return Flow of WorkerResponse with status, the response contains a list of workers
      */
-
     override suspend fun fetchWorkers(miner: String): Flow<Result<ResponseDataList<Worker>>> = flow {
         val minerResponse = apiService.fetchWorkers(miner)
         emit(Result.success(minerResponse))
