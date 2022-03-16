@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Miner Stats</string>
+    <string name="title_home">Workers</string>
+    <string name="title_payouts">Payouts</string>
+    <string name="title_settings">Settings</string>
+    <string name="general_error">Oops something went wrong! Try again</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ethermine">Ethermine</string>
+    <string name="miner_monitor">Miner Monitor</string>
+    <string name="get_started">Get Started</string>
+    <string name="please_enter_valid_address">Please ENTER a valid address</string>
+    <string name="address_wallet_invalid">The provided wallet address is invalid, try again!</string>
+    <string name="enter_your_wallet_address">Enter your wallet address</string>
+    <string name="monitoring_intro">ETHERMINE IS THE WORLD\'S HIGHEST PERFORMING ETHEREUM MINING POOL, This application is for Monitoring ONLY!</string>
+    <string name="explorer">Explorer</string>
+    <string name="ether_scan_tx_uri" translatable="false">https://etherscan.io/tx/%s</string>
+    <string name="logout_and_delete_cache">Logout and delete all cache data</string>
+    <string name="logout">Logout</string>
+    <string name="valid_shares">Valid Shares</string>
+    <string name="stale_shares">Stale Shares</string>
+    <string name="invalid_shares">Invalid Shares</string>
+    <string name="current">Current</string>
+    <string name="average">Average</string>
+    <string name="reported">Reported</string>
+    <string name="format_mhs">%s MH/s</string>
+    <string name="worker_name">Worker Name:</string>
+    <string name="reported_hashrate">Reported Hashrate:</string>
+    <string name="current_hashrate">Current Hashrate:</string>
+    <string name="last_seen">Last seen:</string>
+
+</resources>

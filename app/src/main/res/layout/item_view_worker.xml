@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="entity"
+            type="com.paradox.minerstats.model.dto.Worker" />
+
+        <variable
+            name="vm"
+            type="com.paradox.minerstats.ui.home.HomeViewModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/banner_image"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_100"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_ethereum_banner" />
+
+            <TextView
+                android:id="@+id/worker_name_text"
+                style="@style/Text.Medium.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_16"
+                android:layout_marginStart="@dimen/spacing_16"
+                android:text="@string/worker_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/banner_image" />
+
+            <TextView
+                style="@style/Text.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_4"
+                android:text="@{entity.worker}"
+                app:layout_constraintStart_toEndOf="@+id/worker_name_text"
+                app:layout_constraintTop_toTopOf="@+id/worker_name_text"
+                tools:text="Super Rig" />
+
+            <TextView
+                android:id="@+id/reported_hash_rate_text"
+                style="@style/Text.Medium.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_16"
+                android:text="@string/reported_hashrate"
+                app:layout_constraintStart_toStartOf="@+id/worker_name_text"
+                app:layout_constraintTop_toBottomOf="@+id/worker_name_text" />
+
+            <TextView
+                android:id="@+id/reported_hash_rate_value_text"
+                style="@style/Text.Medium.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_4"
+                android:set_hash_rate="@{entity.reportedHashrate}"
+                android:textColor="@color/teal_700"
+                app:layout_constraintStart_toEndOf="@+id/reported_hash_rate_text"
+                app:layout_constraintTop_toTopOf="@+id/reported_hash_rate_text"
+                tools:text="1.4 Gh/s" />
+
+            <TextView
+                android:id="@+id/current_hash_rate_text"
+                style="@style/Text.Medium.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_16"
+                android:text="@string/current_hashrate"
+                app:layout_constraintStart_toStartOf="@+id/reported_hash_rate_text"
+                app:layout_constraintTop_toBottomOf="@+id/reported_hash_rate_text" />
+
+            <TextView
+                android:id="@+id/current_hash_rate_value_text"
+                style="@style/Text.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_4"
+                android:set_hash_rate="@{entity.currentHashrate}"
+                android:textColor="@color/dark_pink"
+                app:layout_constraintStart_toEndOf="@+id/current_hash_rate_text"
+                app:layout_constraintTop_toTopOf="@+id/current_hash_rate_text"
+                tools:text="1.2 Gh/s" />
+
+            <TextView
+                android:id="@+id/last_seen_text"
+                style="@style/Text.Medium.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_16"
+                android:text="@string/last_seen"
+                app:layout_constraintStart_toStartOf="@+id/current_hash_rate_text"
+                app:layout_constraintTop_toBottomOf="@+id/current_hash_rate_text" />
+
+            <TextView
+                android:id="@+id/last_seen_value_text"
+                style="@style/Text.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:set_date_full_time_text="@{entity.lastSeen}"
+                android:layout_marginBottom="@dimen/spacing_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/last_seen_text"
+                app:layout_constraintTop_toTopOf="@+id/last_seen_text"
+                tools:text="11-10-2022 10:20pm" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>
